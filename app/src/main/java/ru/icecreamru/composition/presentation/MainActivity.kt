@@ -1,4 +1,4 @@
-package ru.icecreamru.composition
+package ru.icecreamru.composition.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
