@@ -4,7 +4,6 @@ import ru.icecreamru.composition.domain.entity.GameSettings
 import ru.icecreamru.composition.domain.entity.Level
 import ru.icecreamru.composition.domain.entity.Question
 import ru.icecreamru.composition.domain.repository.GameRepository
-import java.lang.Integer.MAX_VALUE
 import java.lang.Integer.max
 import java.lang.Integer.min
 import kotlin.random.Random
@@ -30,10 +29,41 @@ object GameRepositoryImpl : GameRepository {
 
     override fun getGameSettings(level: Level): GameSettings {
         return when (level) {
-            Level.TEST -> GameSettings(10, 3, 50, 8)
-            Level.EASY -> GameSettings(10, 10, 70, 60)
-            Level.NORMAL -> GameSettings(20, 20, 80, 40)
-            Level.HARD -> GameSettings(30, 30, 90, 40)
+            Level.TEST -> {
+                GameSettings(
+                    10,
+                    3,
+                    50,
+                    8
+                )
+            }
+
+            Level.EASY -> {
+                GameSettings(
+                    10,
+                    10,
+                    70,
+                    60
+                )
+            }
+
+            Level.NORMAL -> {
+                GameSettings(
+                    20,
+                    20,
+                    80,
+                    40
+                )
+            }
+
+            Level.HARD -> {
+                GameSettings(
+                    30,
+                    30,
+                    90,
+                    40
+                )
+            }
         }
     }
 }
